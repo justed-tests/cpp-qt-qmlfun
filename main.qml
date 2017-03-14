@@ -1,10 +1,25 @@
 import QtQuick 2.5
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 1.4
 
-Window {
+ApplicationWindow {
   visible: true
   width: 640; height: 480
+
+  menuBar: MenuBar {
+    Menu {
+      title: "Aswesome"
+      MenuItem {
+        text: "lalal"
+        onTriggered: console.log("where is my window?")
+      }
+      MenuItem {
+        text: "exit"
+        onTriggered: Qt.quit();
+      }
+    }
+  }
 
   MyToolbar {
     id: myToolbar
