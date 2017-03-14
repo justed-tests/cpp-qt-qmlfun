@@ -1,6 +1,9 @@
 import QtQuick 2.5
 
 Rectangle {
+  property color iconColor: "purple"
+  property alias title: label.text
+
   color: "gray"
   height: 50
   width: 400
@@ -8,14 +11,15 @@ Rectangle {
   Rectangle {
     id: purpleRectangle
     width: 50; height: parent.height
-    color: "purple"
+    color: iconColor
     radius: 10
   }
 
   Text {
+    id: label
     anchors.left: purpleRectangle.right
     anchors.right: parent.right
-    text: "Mobile UI"
+    text: "Mega UI"
     font.pointSize: 30
   }
 }
